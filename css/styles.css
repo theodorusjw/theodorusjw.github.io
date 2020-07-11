@@ -1,0 +1,136 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background-color: skyblue;
+}
+
+header ul li {
+	padding: 16px;
+	margin-left: 24	px;
+}
+
+header a {
+	color: white;
+	text-decoration: none!important;
+	padding: 16px;
+	border-radius: 4px;
+}
+
+a:hover {	
+	color: blue;
+	background-color: white;
+}
+
+#container {
+	flex: 1;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+#introduction {
+	background-color: #eee;
+	width: 100%;
+	min-height: 300px;
+	min-width: 300px;
+}
+
+#introduction .name {
+	font-size: 24px;
+}
+
+.img {
+	text-align: center;
+}
+
+img {
+	border-radius: 50%;
+	width: 200px;
+	height:200px;
+	margin: 32px auto 32px;
+}
+
+#introduction ul {
+	list-style: none;
+	padding: 0;
+}
+
+#introduction li {
+	text-align: center;
+	padding: 0;
+}
+
+main {
+	flex: 1;
+}
+
+main h2 {
+	font-size: 20px;
+	border-bottom: solid 1px #ddd;
+}
+
+main .date {
+	border-bottom: solid 1px #ddd;
+}
+
+section {
+	margin: 64px;
+}
+
+main h1 {
+	text-align: left;
+}
+
+section ul {
+	width: 90%;
+}
+
+section li {
+	font-size: 22px;
+}
+
+footer {
+	background-color: skyblue;
+	text-align: center;
+}
+
+@media (min-width: 576px) {
+	#container {
+		display: flex;
+		flex-direction: row;
+	}	
+	#introduction {
+		width: 30%;
+		min-width: 200px;
+	}
+	#introduction img {
+		width: 200px;
+		height: 200px;
+	}
+	main {
+		flex: 1;
+	}
+	main .date {
+		border: none;
+	}
+	section li {
+		width: 80%;
+	}
+}
+
+@media (min-width: 769) {
+	#introduction {
+		width: 30%;
+		min-width: 300px;
+	}
+}
+
