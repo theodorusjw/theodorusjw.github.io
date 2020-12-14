@@ -33,10 +33,17 @@ header li + li {
   border-top: 1px solid var(--sub-color);
 }
 
-#container {
+#container { /*Edit this portion for the contents*/
   flex: 1;
 }
 
+main h2 {
+  font-size: 22px;
+}
+
+img {
+  object-fit: contain;
+}
 section {
   margin-top: 16px;
   padding-left: 16px;
