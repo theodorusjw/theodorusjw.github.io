@@ -1,832 +1,912 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Curriculum Vitae - Theodorus Jonathan WIJAYA</title>
 
-    <style type="text/css">
-      ul li {margin-bottom: 1em;}
-      a {text-decoration: none;}
+  <head>
+    <meta charset="UTF-8">
+    <title>Education - Theodorus Jonathan Wijaya</title>
+    <style>
+      body {
+        font-family: Calibri, sans-serif;
+        font-size: 18px;
+        line-height: 1.4;
+        margin: 40px auto;
+        max-width: 800px;
+        padding: 0 20px;
+        color: #000;
+      }
+
+      h2 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .entry {
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .position {
+        width: 150px;
+        font-weight: normal;
+        flex-shrink: 0;
+      }
+
+      .details {
+        flex-grow: 1;
+      }
+
+      .institution {
+        font-weight: bold;
+      }
+
+      .subline {
+        margin-top: 2px;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      .reversed-list {
+        counter-reset: pub-counter; /* No fixed number here; JS will set this */
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .reversed-list > li {
+        counter-increment: pub-counter -1;
+        position: relative;
+        padding-left: 3em;
+        margin-bottom: 1em;
+      }
+
+      .reversed-list > li::before {
+        content: "[" counter(pub-counter) "] ";
+        position: absolute;
+        left: 0;
+        font-weight: normal;
+      }
+
+      .date-description-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      .date-description-list > li {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 8px; /* Tight vertical spacing */
+        font-size: 18px;
+      }
+
+      .date-description-list > li > .date {
+        width: 100px;       /* Fixed narrow column for date */
+        font-weight: normal;
+        font-style: regular;
+        white-space: nowrap;
+        flex-shrink: 0;
+        color: #444;
+      }
+
+      .date-description-list > li > .desc {
+        flex-grow: 1;
+      }
+
     </style>
   </head>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.reversed-list').forEach(list => {
+        const count = list.querySelectorAll('li').length;
+        list.style.counterReset = `pub-counter ${count + 1}`;
+      });
+    });
+  </script>
+
   <body>
     <h1>Theodorus Jonathan WIJAYA</h1>
-    <!-- <h3>PhD candidate, Electrical Engineering, The University of Tokyo<br>
-        Visiting researcher, University of California, Berkeley<br>
-        Research fellow, Japan Society for the Promotion of Science (JSPS)<br>
-        Student member, Material Research Society (MRS), Japanese Society of Applied Physics (JSAP)</h3> -->
-    <b>Email:</b> theodorusjw30(at)g.ecc.u-tokyo.ac.jp, theodorus(at)berkeley.edu
-    <Hr>
+    <div class="contact">
+      <b>Email:</b> theodorusjw30@g.ecc.u-tokyo.ac.jp
+    </div>
 
-    <h3>Education & Training</h3>
-    <ul style="list-style:none">
-      <li>Oct 2023 - Present: <b>University of California, Berkeley</b>, USA
-          <ul style="list-style:none">
-              <li>
-              Visiting Ph.D. Student, Electrical Engineering & Computer Science <br>
-              Supervisor: Prof. Ali Javey (<a href="https://nano.eecs.berkeley.edu/">Javey Group</a>). <br>
-              Research topic: Nano-optoelectronics<br>
+      <h3>Education & Training</h3><div class="entry">
+      <div class="position">Visiting Researcher</div>
+      <div class="details">
+        <div class="institution">University of California, Berkeley</div>
+        <div class="subline">Electrical Engineering &amp; Computer Science, 2023 – Present</div>
+        <div class="subline">Advisor: Prof. Ali Javey</div>
+        <div class="subline">Areas of Expertise: Nano-optoelectronics, 2D Semiconductors</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="position">PhD Candidate</div>
+      <div class="details">
+        <div class="institution">The University of Tokyo</div>
+        <div class="subline">Electrical Engineering &amp; Information Systems, 2023 – Present</div>
+        <div class="subline">Advisor: Prof. Takao Someya</div>
+        <div class="subline">Areas of Expertise: Organic Electronics, Imaging System</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="position">MEng</div>
+      <div class="details">
+        <div class="institution">The University of Tokyo</div>
+        <div class="subline">Electrical Engineering &amp; Information Systems, 2023</div>
+        <div class="subline">Advisor: Prof. Takao Someya</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="position">BEng</div>
+      <div class="details">
+        <div class="institution">The University of Tokyo</div>
+        <div class="subline">Electrical &amp; Electronic Engineering, 2021</div>
+        <div class="subline italic">Dean’s Award (First in the Department)</div>
+      </div>
+    </div>
+
+
+
+      <h3>Journal Publications (First Author)</h3>
+      <ol class="reversed-list" reversed>
+        <li>
+          <u>T.J. Wijaya</u>, N. Higashitarumizu, S. Wang, S. Tajima, H.M. Kim, S. Wang, D. Zhang, J. Bullock, T. Yokota, T. Someya, & A. Javey.
+          <br>"Mechanically flexible mid-wave infrared imagers using black phosphorus ink films," 
+          <br>Under review in <i>Nat. Commun.</i>, (2025).
+        </li>
+
+        <li>
+          <u>T.J. Wijaya</u>, S. Xiong, K. Sasaki, Y. Kato, K. Mori, M. Koizumi, S. Lee, M. Kobayashi, Y. Zhou, K. Fukuda, T. Yokota, & T. Someya.
+          <br>"A Highly Stable Organic-Inorganic Hybrid Electron Transport Layer for Ultraflexible Organic Photodiodes," 
+          <br><i>Adv. Mater.</i> <b>37</b>, 2501951, 
+          <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202501951">In-press</a>, (2025).
+        </li>
+
+        <li>
+          <u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya. 
+          <br>"Photostability improvement of organic photodiodes with ZnO electron transport layer," 
+          <br><i>Adv. Photonics Res.</i> <b>4</b>, 2200355, 
+          <a href="https://doi.org/10.1002/adpr.202200355">In-press</a>, (2023).
+        </li>
+      </ol>
+
+      <h3>International Conference Presentations (First Author)</h3>
+      <ol class="reversed-list" reversed>
+          <li><u>T.J. Wijaya</u>, N. Higashitarumizu, H.M. Kim, S. Wang, D. Zhang, & A. Javey. 
+            <br>"Mechanically flexible mid-wave infrared imagers using black phosphorus ink films,”<br>
+            <i>Berkeley Sensor & Actuator Center (BSAC) Spring 2025 Research Review</i>, Berkeley, CA, USA, (2025.4). (Poster)
+          </li>
+
+          <li><u>T.J. Wijaya</u>, N. Higashitarumizu, S. Tajima, S. Wang, H.M. Kim, S. Wang, D. Zhang, & A. Javey. 
+            <br>"Flexible mid-infrared imager using black phosphorus ink,”<br>
+            <i>2025 JSPS San Francisco Researcher Exchange</i>, Berkeley, CA, USA, (2025 Jan). (Poster)
+          </li>
+
+          <li><u>T.J. Wijaya</u>, N. Higashitarumizu, S. Tajima, S. Wang, H.M. Kim, S. Wang, D. Zhang, & A. Javey. 
+            <br>"High-efficiency ink-based mid-IR LEDs and photodetectors,”<br>
+            <i>Berkeley Sensor & Actuator Center (BSAC) Fall 2024 Research Review</i>, Berkeley, CA, USA, (2024 Sep). (Poster)
+          </li>
+
+          <li><u>T.J. Wijaya</u>, N. Higashitarumizu, T. Yokota, T. Someya, & A. Javey. 
+            <br>"Uncooled mid-infrared imager using scalable black phosphorus ink,”<br>
+            <i>2024 JSPS San Francisco Researcher Exchange</i>, Berkeley, CA, USA, (2024 Aug). (Poster)
+          </li>
+
+          <li><u>T.J. Wijaya</u>, H.M. Kim, S. Wang, N. Higashitarumizu, & A. Javey. 
+            <br>"High-efficiency ink-based mid-IR LEDs and photodetectors,”<br>
+            <i>Berkeley Sensor & Actuator Center (BSAC) Spring 2024 Research Review</i>, Berkeley, CA, USA, (2024 Mar). (Poster)
+          </li>
+
+          <li><u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya. 
+            <br>"Realizing photostable detection in organic photodiodes with ZnO electron transport layer,”<br>
+            <i>2023 Material Research Society (MRS) Spring Meeting</i>, San Francisco, CA, USA, (2023 Apr). (Reviewed, oral)
+          </li>
+
+          <li><u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, D. Lloyd, H. Uchida, M. Inoue, & A. Hirohata. 
+            <br>"Spin current induced by a surface plasmon polariton,"<br>
+            <i>IEEE Magnetics Society Intermag 2021</i>, Lyon, France, (2021 Apr). (Reviewed, oral)
+          </li>
+
+          <li><u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, D. Lloyd, H. Uchida, M. Inoue, & A. Hirohata. 
+            <br>"Spin current induction via surface plasmon polariton,"<br>
+            <i>Institute of Physics (IOP) Magnetism 2021</i>, Online, (2021 Apr). (Oral)
+          </li>
+
+          <li><u>T.J. Wijaya</u>, L. D. Anh, S. Kaneta-Takada, M. Seki, H. Tabata, M. Tanaka, & S. Ohya.  
+            <br>"Electrical gate control of carrier type of the two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface and its field-effect-transistor operation,"<br>
+            <i>American Physical Society (APS) March Meeting 2021</i>, P55.00009, Online, (2021 Mar). (Oral)
+          </li>
+
+          <li><u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, D. Lloyd, H. Uchida, M. Inoue, & A. Hirohata. 
+            <br>"Spin current induction via surface plasmon polariton,"<br>
+            <i>The 4th International Symposium for The Core Research Cluster for Spintronics</i>, Online, (2021 Feb). (Oral)
+          </li>
+        </ol>
+
+      <h3>Book Chapters</h3>
+
+      <ol class="reversed-list" reversed>
+        <li><u>T.J. Wijaya</u>. 
+          <br>“Industri Elektronik 4.0,” in “Kumpulan Karya Literasi Mahasiswa: Indonesia dan Revolusi Industri 4.0,”<br>
+          F. F. N. Azizah et al. (Eds.), ISBN:978-623-02-3964-9, (Deepublish, Jogjakarta, Indonesia, 2022), p. 77–97.
+          <br>Description: An outlook on the implementation of Industry 4.0 on the electronic industry in Indonesia. The project was supported by the Embassy of the Republic of Indonesia in Tokyo, Japan.
+        </li>
+      </ol>
+
+
+      <h3>Honors and Awards</h3>
+      <ul class="date-description-list">
+        <li>
+          <span class="date">Jun 2023</span>
+          <span class="desc"><b>Special Grant for JSPS Fellows</b> (JP: 日本学術会議振興会科学研究費助成事業特別枠)</span>
+        </li>
+
+        <li>
+          <span class="date">Mar 2023</span>
+          <span class="desc">
+            <b>Excellent Master's Thesis Award</b> (JP: 優秀修士論文賞)
+            <ul>
+              <li>Department of Electrical Enginering & Information Systems, The University of Tokyo</li>
+            </ul>
+          </span>
+        </li>
+
+        <li>
+          <span class="date">Mar 2021</span>
+          <span class="desc">
+            <b>IEEJ Electrical Science Encouragement Award</b> (JP: 電気学会東京支部電気学術奨励賞)
+            <ul>
+              <li>The Institute of Electrical Engineers of Japan (IEEJ), Tokyo, Japan</li>
+            </ul>
+          </span>
+        </li>
+
+        <li>
+          <span class="date">Mar 2021</span>
+          <span class="desc">
+            <b>Dean's Award of Faculty of Engineering</b> (JP: 工学部長賞)
+            <ul>
+              <li>Faculty of Engineering, The University of Tokyo, graduation year 2021</li>
+            </ul>
+          </span>
+        </li>
+
+        <li>
+          <span class="date">Mar 2021</span>
+          <span class="desc">
+            <b>Excellent Bachelor Thesis Award</b> (JP: 優秀卒業論文賞)
+            <ul>
+              <li>Department of Electrical and Electronic Engineering, The University of Tokyo, first in the graduation year 2021</li>
+            </ul>
+          </span>
+        </li>
+
+        <li>
+          <span class="date">Mar 2017</span>
+          <span class="desc">
+            <b>Acknowledgment Speech</b> (JP: 謝辞代表)
+            <ul>
+              <li>Represented pre-undergraduate student batch 2016 of Japanese Language Center, Tokyo University of Foreign Studies (TUFS).</li>
+            </ul>
+          </span>
+        </li>
+
+        <li>
+          <span class="date">Mar 2017</span>
+          <span class="desc">
+            <b>TUFS JLC Diligence Award</b> (JP: 勤勉賞)
+            <ul>
+              <li>Japanese Language Center, Tokyo University of Foreign Studies (TUFS).</li>
+            </ul>
+          </span>
+        </li>
+
+        <li>
+          <span class="date">Sep 2014</span>
+          <span class="desc">
+            <b>Bronze Medal</b> in Indonesian Mathematical Olympiad (OSN)
+            <ul>
+              <li>Advanced to Phase 1 of the National Team Training for the International Mathematical Olympiad (IMO) 2015.</li>
+            </ul>
+          </span>
+        </li>
+      </ul>
+
+
+    <h3>Research Grants</h3>
+    <ul class="date-description-list">
+      <li>
+        <span class="date">Apr 2024 -<br> Mar 2025</span>
+        <span class="desc">
+          <b>Mizuho Foundation for the Promotion of Sciences</b>
+          <ul>
+            <li>67th Engineering Research Grant<br>
+            "低次元材料を用いたバルクヘテロ構造の創製による超フレキシブル中赤外光検出システムの開拓",<br>
+            2,000,000 JPY (appx. 13,500 USD)</li>
           </ul>
+        </span>
       </li>
 
-      <li>Apr 2023 - Present: <b>The University of Tokyo</b>, Japan         
-          <ul style="list-style:none">
-              <li>
-              Ph.D. Candidate, Electrical Engineering & Information Systems<br>
-              Supervisor: Prof. Takao Someya (<a href="www.ntech.t.u-tokyo.ac.jp/">Someya Group</a>). <br>
-              Research topic: Organic electronics<br>
+      <li>
+        <span class="date">Jan 2024 -<br> Feb 2024</span>
+        <span class="desc">
+          <b>Marubun Foundation</b>
+          <ul>
+            <li>27th International Travel Grant<br>
+            "深部組織イメージング用の二次元材料インクによる超フレキシブル赤外光検出素子の開発",<br>
+            400,000 JPY (appx. 2,700 USD)</li>
           </ul>
+        </span>
       </li>
 
-    	<li>Apr 2021 - Mar 2023: <b>The University of Tokyo</b>, Japan
-         	
-        	<ul style="list-style:none">
-            	<li>
-              M.Eng., Electrical Engineering & Information Systems<br>
-              Supervisor: Prof. Takao Someya (<a href="www.ntech.t.u-tokyo.ac.jp/">Someya Group</a>). <br>
-              <!-- Research topic: Flexible electronics<br> -->
-              Excellent Master's Thesis Award, GPA: 4.0/4.0 <br>
-              <!-- Thesis: Photostable ultraflexible organic photodiodes using a hybrid electron transport layer<br> -->
-              
-              <!-- (Materials Science, Soft Matter Physics, Quantum Physics, Artificial Intelligence, etc.) -->
-
-			    </ul>
+      <li>
+        <span class="date">Apr 2024 -<br> Mar 2025</span>
+        <span class="desc">
+          <b>NEC C&amp;C Foundation</b>
+          <ul>
+            <li>Grant for Researchers 2024<br>
+            "ナノ材料科学と深層学習の融合による超フレキシブル赤外光検出システムの開拓",<br>
+            1,800,000 JPY (appx. 12,200 USD)</li>
+          </ul>
+        </span>
       </li>
 
-        <li>Apr 2017 - Mar 2021: <b>The University of Tokyo</b>, Japan
-         	
-        	<ul style="list-style:none">
-            	<li>
-              B.Eng., Electrical and Electronic Engineering<br>
-              Supervisors: Prof. Masaaki Tanaka & Prof. Shinobu Ohya (<a href="http://www.cryst.t.u-tokyo.ac.jp/">Tanaka-Ohya Group</a>).<br>
-            	            	<!-- Research topic: Oxide electronics<br> -->
-              Dean's Award (1st in the Department), GPA: 3.7/4.0 <br>
-              <!-- Thesis: Electrical gate control of carrier type of the two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface and its field-effect-transistor operation<br> -->
-              
-              <!-- (Semiconductor, Solid State Physics, Quantum Mechanics, Optics, Software Programming, etc.) -->
-			</ul>
+      <li>
+        <span class="date">Apr 2023 -<br> Mar 2026</span>
+        <span class="desc">
+          <b>Japan Society for the Promotion of Science (JSPS)</b>
+          <ul>
+            <li>Grant-in-Aid for JSPS Fellows (23KJ0760)<br>
+            "Layer-by-Layer法による近赤外光有機光検出素子の高感度化",<br>
+            4,200,000 JPY (appx. 28,600 USD)</li>
+          </ul>
+        </span>
+      </li>
+    </ul>
+
+
+    <h3>Fellowships &amp; Scholarships</h3>
+    <ul class="date-description-list">
+      <li>
+        <span class="date">Apr 2023 -<br> Mar 2026</span>
+        <span class="desc">
+          <b>Japan Society for the Promotion of Science (JSPS)</b>
+          <ul>
+            <li>Monthly stipend (200,000 JPY) for 3 years.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li>
+        <span class="date">Apr 2021 -<br> Mar 2023</span>
+        <span class="desc">
+          <b>Japanese Government (MEXT) Scholar</b>
+          <ul>
+            <li>Monthly stipend (144,000 JPY) for 2 years, full tuition fee, and travel support.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li>
+        <span class="date">Apr 2016 -<br> Mar 2021</span>
+        <span class="desc">
+          <b>Japanese Government (MEXT) Scholar</b>
+          <ul>
+            <li>Monthly stipend (120,000 JPY) for 5 years, full tuition fee, and travel support.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li>
+        <span class="date">Feb 2020 -<br> Mar 2020</span>
+        <span class="desc">
+          <b>UTokyo Go Global Scholarship</b>
+          <ul>
+            <li>Travel and accommodation support (160,000 JPY) for a short-term study abroad at University of York, York, UK.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li>
+        <span class="date">Mar 2019</span>
+        <span class="desc">
+          <b>UTokyo Go Global Scholarship</b>
+          <ul>
+            <li>Travel and accommodation support (100,000 JPY) to participate in a scientific training at Ecole Polytechnique, Palaiseau, France.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li>
+        <span class="date">Sep 2018</span>
+        <span class="desc">
+          <b>UTokyo Go Global Scholarship</b>
+          <ul>
+            <li>Travel and accommodation support (80,000 JPY) to participate in a joint summer program of UTokyo, Peking University, and Tsinghua University in Beijing, P.R. China.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li>
+        <span class="date">Aug 2017</span>
+        <span class="desc">
+          <b>JASSO Scholarship</b>
+          <ul>
+            <li>Travel and accommodation support (200,000 JPY) for a visit to MIT Electronic Materials Research Group, Cambridge, USA.</li>
+          </ul>
+        </span>
+      </li>
+
+      <li>
+        <span class="date">Aug 2015 -<br> Mar 2016</span>
+        <span class="desc">
+          <b>Bandung Institute of Technology <a href="http://www.itbuntuksemua.com/">BIUS</a> Scholar</b>
+          <ul>
+            <li>Full tuition fee for 4-year bachelor degree (resigned).</li>
+          </ul>
+        </span>
+      </li>
+    </ul>
+
+
+
+      <h3>Preprints</h3> 
+      <ol class="reversed-list" reversed>
+       <!-- <ul>
+        <li>[4] L. D. Anh, S. Kaneta-Takada, <u>T.J. Wijaya</u>, H. Shinya, T. Fukushima, A. Masago, H. Katayama-Yoshida, M. Tokunaga, M. Kobayashi, M. Seki, H. Tabata, M. Tanaka, & S. Ohya. 
+          <br>  "Electrical ambipolar control of high-mobility carriers at a wide-gap oxide interface." (In preparation)
         </li>
-				
-<!-- 		<li>Apr 2016 - Mar 2017:
-          	Japanese Language Center, Tokyo University of Foreign Studies (TUFS), Tokyo, Japan.
-          	<ul style="list-style:none">
-            	<li>Intensive education of Japanese language for undergraduate study.<br>
-				Graduate presentation: "Practical realization of Space Solar Power System (SSPS)"</li>
-				<i>Honored to address Acknowledgement Speech</i> (謝辞).</li>
-			</ul>
+      </ul> -->
+
+      
+        <li>L. D. Anh, <u>T.J. Wijaya</u>, S. Kaneta-Takada, M. Seki, H. Tabata, M. Tanaka, & S. Ohya. 
+          <br>  "All-oxide-based high-mobility planar PN junctions and tunnelling field effect transistor," 
+          <a href="https://europepmc.org/article/ppr/ppr317402"> preprint</a>, (2021). (In preparation)
         </li>
-				
-		<li>Aug 2015 - Mar 2016:
-          	<b>Undergraduate student</b>,
-          	Faculty of Industrial Engineering, Bandung Institute of Technology, Indonesia.
-          	<ul style="list-style:none">
-            	<li>GPA: 3.95/4.00 (resigned)<br></li>
-          	</ul>
+      
+        <li><u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, H. Uchida, M. Inoue, & A. Hirohata. 
+          <br>  "Spin current generation by a surface plasmon polariton",
+          <a href="https://arxiv.org/abs/2004.12348"> preprint</a>, (2020). (In preparation)
         </li>
-         -->
+      
+      </ol>
+
+
+<!--       <h3>Journal Publications (Co-author)</h3>
+        <ul>
+
+        <li>[3] K. Sasaki, C. Okuda, <u>T.J. Wijaya</u>, S. Lee, K. Yamagishi, T. Someya, & T. Yokota.
+          <br> "Detachable Top Electrode-Organic Photodetector for Repeated Nondestructive Evaluation of Device Performance and Surface Analysis of the Active Layer,"
+          <br> <i>ACS Appl. Mater. Interfaces</i> <b>17</b>, 5, 8064
+          <a href="https://pubs.acs.org/doi/10.1021/acsami.4c15572"> In-press</a>, (2025).
+        </li>
+      </ul>
+
+
+        <ul>
+        <li>[2] S. Harimurti, W. Wang, K. Sasaki, C. Okuda, <u>T.J. Wijaya</u>, M.O.G. Nayeem, S. Lee, T. Yokota, & T. Someya. 
+          <br>"Janus electrode with stable asymmetric wettability for robust biosignal monitoring on sweaty skin," 
+          <br><i>Mater. Today</i> <b>74</b>, 94 <a href="https://doi.org/10.1016/j.mattod.2024.03.009">In-press</a>, (2024).
+        </li>
+      </ul>
+
+      <ul>
+        <li>[1] H. Xu, H. Sodabanlu, M. W. Wilkins, A. Delamarre, <u>T.J. Wijaya</u>, K. Watanabe, Y. Nakano, & M. Sugiyama. 
+          <br> "Analysis of perimeter recombination on multijunction solar cells using luminescence imaging,"
+          <br> <i>Proc. SPIE</i>, 112750K</i>,
+          <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11275/112750K/Analysis-of-perimeter-recombination-on-multijunction-solar-cells-using-luminescence/10.1117/12.2545575.short?SSO=1"> In-press</a>, (2020).
+        </li>
+      </ul> -->
+
+
+<!--       <h3>International Conference Presentations (Co-author)</h3>
+      <ul>
+        <li>[7] N. Higashitarumizu, S. Wang, H.M. Kim, <u>T.J. Wijaya</u>, K. Lee, & A. Javey.  
+          <br> "Large-rea processable two-dimensional material films," 
+          <br><i>Berkeley Sensor & Actuator Center (BSAC) Fall 2024 Research Review</i>, Berkeley, CA, USA, (2024 Sep). (Poster)
+        </li>
+      </ul>
+
+      <ul>
+        <li>[6] H. Koizumi, D. Lloyd, <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, & A. Hirohata.  
+          <br> "Spin current generation by a surface plasmon polariton,"
+          <br> <i>Intl. Conf. on Magnetism (<a href="https://www.icm2024.org/">ICM 2024</a>)</i>, Bologna, Italy, (2024 Jun). (Reviewed, oral)
+        </li>
+      </ul>
+
+      <ul>
+        <li>[5] N. Higashitarumizu, H.M. Kim, <u>T.J. Wijaya</u>, S. Wang, K. Lee, & A. Javey.  
+          <br> "Large-area processable luminescent black phosphorus,"
+          <br> <i>Berkeley Sensor & Actuator Center (BSAC) Spring 2024 Research Review</i>, Berkeley, CA, USA, (2024 Mar). (Poster)
+        </li>
+      </ul>
+
+      <ul>
+        <li>[4] D. Lloyd, <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, H. Uchida, M. Inoue, & A. Hirohata.  
+          <br> "Spin current generation by a surface plasmon polariton and beyond,"
+          <br> <i>Intl. Conf. on Adv. Plasmonics, Magnetics, Magneto-optical Technol. (<a href="https://seed-nanotech.com/icapmot-2022/">ICAPMOT</a>)</i>, Online, (2022 May). (Reviewed, oral)
+        </li>
+      </ul>
+
+      <ul>
+        <li>[3] L. D. Anh, S. Kaneta-Takada, <u>T.J. Wijaya</u>, H. Shinya, T. Fukushima, A. Masago, H. Katayama-Yoshida, M. Tokunaga, M. Kobayashi, M. Seki, H. Tabata, M. Tanaka, & S. Ohya.  
+          <br> "Ambipolar control of high-mobility carriers at a wide-gap oxide interface and applications towards oxide-based electronics,"
+          <br> <i>27th Intl. Workshop on Oxide Electronics</i>, Genoa, Italy, (2021 Oct). (Invited, reviewed, oral)
+        </li>
+      </ul>
+
+      <ul>
+        <li>[2] L. D. Anh, <u>T.J. Wijaya</u>, S. Kaneta-Takada, M. Seki, H. Tabata, M. Tanaka, & S. Ohya.  
+          <br> "Field-effect transistor based on two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface,"
+          <br> <i>24th Intl. Conf. on Electronic Properties of Two-Dimensional Systems/20th Intl. Conf. on Modulated Semiconductor Structures (EP2DS-MSS)</i>, Toyama, Japan, (2021 Oct). (Reviewed, oral)
+        </li>
+      </ul>
+
+      <ul>
+        <li>[1] K. Elphick, <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, H. Uchida, M. Inoue, & A. Hirohata. 
+          <br> "Spin current generation by a surface plasmon polariton,"
+          <br> <i>Insitute of Physics (IOP) Current Research in Magnetism (CRIM) 2020: High Frequency Spintronics</i>, Online, (2020 Sep). (Oral)
+        </li>
+      </ul> -->
+      
+
+      <h3>National Conference Presentations (First Author)</h3> 
+      <ol class="reversed-list" reversed>
+        <li><u>T.J. Wijaya</u>, S. Xiong, S. Lee, K. Fukuda, T. Yokota, & T. Someya.
+          <br> "Photostable ultraflexible organic photodiodes using a hybrid electron transport layer,"
+          <br><i>84th Japan Society of Applied Physics (JSAP) Autumn Meeting 2023</i>, Kumamoto, Japan, (2023 Sep). (Oral)
+        </li>
+      
+        <li><u>T.J. Wijaya</u>, S. Xiong, S. Lee, K. Fukuda, M. Kobayashi, T. Yokota, & T. Someya.
+          <br> "Ultraflexible photostable organic photodiodes using a hybrid electron transport layer,"
+          <br> <i>5th Flexible & Stretchable Electronics (FSE) Event</i>, Tokyo, Japan, (2023 May). (Oral)
+        </li>
+      
+        <li><u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya.
+          <br> "Revealing effects of illumination wavelength on the dark current increase of organic photodiodes with ZnO electron transport layer,"
+          <br> <i>83rd Japan Society of Applied Physics (JSAP) Autumn Meeting 2022</i>, Sendai, Japan, (2022 Sep). (Oral)
+        </li>
+     
+        <li><u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya.
+          <br> "Revealing effects of illumination wavelength on the dark current increase of organic photodiodes with ZnO electron transport layer,"
+          <br> <i>4th Flexible & Stretchable Electronics (FSE) Event</i>, Yamagata, Japan, (2022 Jul). (Oral)
+        </li>
+      
+        <li><u>T.J. Wijaya</u>, R. Okano, S. Lee, M. Kobayashi, T. Yokota, & T. Someya.
+          <br> "Suppression of dark current increase after illumination in ZnO-based organic photodiodes by controlling annealing conditions",
+          <br> <i>3rd Flexible & Stretchable Electronics (FSE) Event</i>, Online, (2021 Dec). (Oral)
+        </li>
+      
+        <li><u>T.J. Wijaya</u>, M. Koizumi, S. Lee, T. Yokota, & T. Someya. 
+          <br> "Improvement of dark current stability of ZnO-based organic photodiode by control of annealing condition",
+          <br> <i>82nd Japan Society of Applied Physics (JSAP) Autumn Meeting 2021</i>, Online, (2021 Sep). (Oral)
+        </li>
+      
+       
+        <li><u>T.J. Wijaya</u>, L. D. Anh, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
+          <br> "Electrical control of two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface,"
+          <br> <i>68th Japan Society of Applied Physics (JSAP) Spring Meeting 2021</i>, 19a-Z14-11, Online, (2021 Mar). (Oral)
+        </li>
+      
+        <li><u>T.J. Wijaya</u>, L. D. Anh, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
+          <br> "Gate-controlled 2-dimensional carrier transport at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface,"
+          <br> <i>12th Research Forum Cryogenic Research Center</i>, Online, (2021 Mar). (Poster)
+        </li>
+      
+      <li><u>T.J. Wijaya</u>, L. D. Anh, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
+          <br> "Electrical control of two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface,"
+          <br> <i>12th Meeting of Ferroic-ordering and its Related Group</i>, Cont-8, Online, (2021 Jan) (Oral)
+        </li>
+
+      </ol>
+      <!--       
+    <h3>National Conference Presentations (Co-author)</h3> 
+
+      <ul>
+        <li>[3] L. D. Anh, <u>T.J. Wijaya</u>, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
+          <br> "Field-effect transistor based on two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface",
+          <br> <i>68th Japan Society of Applied Physics (JSAP) Spring Meeting 2021</i>, 19a-Z14-10, Online, (2021 Mar) (Oral).
+        </li>
+      </ul>
+       
+      <ul>
+        <li>[2] L. D. Anh, <u>T.J. Wijaya</u>, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
+          <br> "Field-effect transistor based on two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface",
+          <br> <i>12th Meeting of Ferroic-ordering and its Related Group</i>, Cont-7, Online, (2021 Jan). (Oral)
+        </li>
+      </ul>
+
+      <ul>
+        <li>[1] H. Xu, <u>T.J. Wijaya</u>, H. Sodabanlu, K. Watanabe, Y. Nakano, & M. Sugiyama. 
+          <br> "Analysis of perimeter recombination on multi-junction solar cells using luminescence imaging,"
+          <br> <i>80th Japan Society of Applied Physics (JSAP) Autumn Meeting</i>, 20p-B12-7, Hokkaido, Japan, (2019 Sep). (Oral)
+        </li>
+      </ul> -->
+
+    <h3>Experiences</h3>
+    <ul style = "list-style: none">
+    <li>
+      Apr 2024 - Present: <b>Research Assitant</b>, JST PRESTO
+    </li> 
+
+    <li>
+      Apr 2024 - Present: <b>Research Fellow</b>, NEC C&C Foundation
+    </li> 
+
+    <li>
+      Oct 2023 - Present: <b>Visiting Researcher</b>, University of California, Berkeley 
+        <ul>
+          PI: Prof. Ali Javey (<a href="nano.eecs.berkeley.edu">Javey Group</a>, Department of Electrical Engineering & Computer Science)
+        </ul>
+    </li> 
+
+    <li>
+      Oct 2023 - Present: <b>Research Affiliate</b>, Lawrence Berkeley National Lab (LBNL)
+    </li> 
+
+    <li>
+      Oct 2023 - Present: <b>Project Researcher</b>, Berkeley Sensor & Actuator Center (BSAC)
+    </li> 
+
+    <li>
+      Apr 2023 - Present: <b>Research Fellow</b>, Japan Society for the Promotion of Science (JSPS)
+        <ul>
+          <li>PI: Prof. Takao Someya (<a href="www.ntech.t.u-tokyo.ac.jp/">Someya Group</a>). DC1 fellowship for young researcher. </li>
+        </ul>
+    </li> 
+
+    <li>
+      Sep 2021 - Sep 2023: <b>Teaching Assistant</b>, The University of Tokyo
+        <ul>
+          <li><!--Teach and guide undergraduate students to learn and fabricate organic photodetectors and thin-film transistors along with their basics physics and characterisation.-->
+            PI: Prof. Tomoyuki Yokota (<a href="www.ntech.t.u-tokyo.ac.jp/">Someya Group</a>, Department of Electrical Engineering & Information Systems)
+          </li>
+        </ul>
+    </li> 
+
+    <li>
+      Sep 2021 - Mar 2022: <b>Research Assistant</b>, The University of Tokyo
+        <ul>
+          <li>PI: Prof. Takao Someya (<a href="www.ntech.t.u-tokyo.ac.jp/">Someya Group</a>, Department of Electrical Engineering & Information Systems)
+          </li>
+        </ul>
+    </li> 
+
+    <li>Feb 2020 - Mar 2020: <b>Research Associate</b>, University of York, UK.
+        <ul>
+        <!-- <li>Topic: Spin current generation by surface plasmon polariton.-->
+        PI: Prof. Atsufumi Hirohata (<a href="http://www-users.york.ac.uk/~ah566/members/members.html">Spintronics Lab</a>, Departement of Electronic Engineering)</li>
+        </ul>
+    </li>
+      
+      
+    <li>Jan 2019 - Jan 2020:<b> English as a Second Language Tutor</b>
+        <ul>
+          <!-- <li>Developed a customized syllabus, trained a number of elementary school students with focus on speaking by shadowing-conversation, reading, and grammar for a 1-to-2-hour weekly session.
+          </li> -->
+        </ul>
+      </li>
+      
+      <li>Apr 2018 - Apr 2019:<b> Natural Science Tutor</b>, The University of Tokyo
+        <ul>
+          <li>Supervised by Globalization Office, Komaba Campus
+        </ul>
+      </li>
     </ul>
 
 
-    <h3>Journal Publications (First Author)</h3>
-    <ul style="list-style:none">
-      <li>[3] <u>T.J. Wijaya</u>, N. Higashitarumizu, S. Wang, S. Tajima, H.M. Kim, S. Wang, D. Zhang, J. Bullock, T. Yokota, T. Someya, & A. Javey.
-        <br>"Mechanically flexible mid-wave infrared imagers using black phosphorus ink films," 
-        <br> Under review in <i>Nat. Commun.</i></a>, (2025).
-      </li>
-
-      <li>[2] <u>T.J. Wijaya</u>, S. Xiong, K. Sasaki, Y. Kato, K. Mori, M. Koizumi, S. Lee, M. Kobayashi, Y. Zhou, K. Fukuda, T. Yokota, & T. Someya.
-        <br>"A Highly Stable Organic-Inorganic Hybrid Electron Transport Layer for Ultraflexible Organic Photodiodes," 
-        <br><i>Adv. Mater.</i> <b>37</b>, 2501951, <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202501951">In-press</a>, (2025).
-      </li>
-
-      <li>[1] <u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya. 
-        <br>"Photostability improvement of organic photodiodes with ZnO electron transport layer," 
-        <br><i>Adv. Photonics Res.</i> <b>4</b>, 2200355, <a href="doi.org/10.1002/adpr.202200355">In-press</a>, (2023).
-      </li>
-    </ul>
-
-    <h3>International Conference Presentations (First Author)</h3>
-
-    <ul style="list-style:none">
-      <li>[10] <u>T.J. Wijaya</u>, N. Higashitarumizu, H.M. Kim, S. Wang, D. Zhang, & A. Javey. 
-        <br> "Mechanically flexible mid-wave infrared imagers using black phosphorus ink films,”<br><i>Berkeley Sensor & Actuator Center (BSAC) Spring 2025 Research Review</i>, Berkeley, CA, USA, (2025.4). (Poster)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[9] <u>T.J. Wijaya</u>, N. Higashitarumizu, S. Tajima, S. Wang, H.M. Kim, S. Wang, D. Zhang, & A. Javey. 
-        <br> "Flexible mid-infrared imager using black phosphorus ink,”<br><i>2025 JSPS San Francisco Researcher Exchange</i>, Berkeley, CA, USA, (2025 Jan). (Poster)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[8] <u>T.J. Wijaya</u>, N. Higashitarumizu, S. Tajima, S. Wang, H.M. Kim, S. Wang, D. Zhang, & A. Javey. 
-        <br> "High-efficiency ink-based mid-IR LEDs and photodetectors,”<br><i>Berkeley Sensor & Actuator Center (BSAC) Fall 2024 Research Review</i>, Berkeley, CA, USA, (2024 Sep). (Poster)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[7] <u>T.J. Wijaya</u>, N. Higashitarumizu, T. Yokota, T. Someya, & A. Javey. 
-        <br> "Uncooled mid-infrared imager using scalable black phosphorus ink,”
-        <br><i>2024 JSPS San Francisco Researcher Exchange</i>, Berkeley, CA, USA, (2024 Aug). (Poster)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[6] <u>T.J. Wijaya</u>, H.M. Kim, S. Wang, N. Higashitarumizu, & A. Javey. 
-        <br> "High-efficiency ink-based mid-IR LEDs and photodetectors,”<br><i>Berkeley Sensor & Actuator Center (BSAC) Spring 2024 Research Review</i>, Berkeley, CA, USA, (2024 Mar). (Poster)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[5] <u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya. 
-        <br> "Realizing photostable detection in organic photodiodes with ZnO electron transport layer,”<br><i>2023 Material Research Society (MRS) Spring Meeting</i>, San Francisco, CA, USA, (2023 Apr). (Reviewed, oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[4] <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, D. Lloyd, H. Uchida, M. Inoue, & A. Hirohata. 
-        <br> "Spin current induced by a surface plasmon polariton,"
-        <br> <i>Institute of ELectrical and Electronics Engineers (IEEE) Magnetics Society Intermag 2021</i>, Lyon, France, (2021 Apr). (Reviewed, oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[3] <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, D. Lloyd, H. Uchida, M. Inoue, & A. Hirohata. 
-        <br> "Spin current induction via surface plasmon polariton,"
-        <br> <i>"Institute of Physics (IOP) Magnetism 2021</i>, Online, (2021 Apr), 2021. (Oral)
-      </li>
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[2] <u>T.J. Wijaya</u>, L. D. Anh, S. Kaneta-Takada, M. Seki, H. Tabata, M. Tanaka, & S. Ohya.  
-        <br> "Electrical gate control of carrier type of the two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface and its field-effect-transistor operation,"
-        <br> <i>American Physical Society (APS) March Meeting 2021</i>, P55.00009, Online, (2021 Mar). (Oral)
-      </li>
-    </ul>
-
-     <ul style="list-style:none">
-      <li>[1] <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, D. Lloyd, H. Uchida, M. Inoue, & A. Hirohata. 
-        <br> "Spin current induction via surface plasmon polariton,"
-        <br> <i>The 4th International Symposium for The Core Research Cluster for Spintronics</i>, Online, (2021 Feb). (Oral)
-      </li>
-    </ul>
-
-    <h3>Book Chapters</h3>
-
-    <ul style="list-style:none">
-      <li>[1] <u>T.J. Wijaya</u>. 
-        <br>“Industri Elektronik 4.0,” in “Kumpulan Karya Literasi Mahasiswa: Indonesia dan Revolusi Industri 4.0,”
-        <br>F. F. N. Azizah et al. (Eds.), ISBN:978-623-02-3964-9, (Deepublish, Jogjakarta, Indonesia, 2022), p. 77–97.
+      <h3>Research Experiences</h3>
+      <ul>
+      <li>
+        Aug 2019 - Oct 2019:
+        <b>Research Trainee</b>, The University of Tokyo, Japan.
+        <ul>
+        <li>Topic: "Estimation of spin-to-charge conversion effeciency on Co<sub>2</sub>FeAl<sub>0.5</sub>Si<sub>0.5</sub>/<i>n</i>-Ge spin pumping experiment."
         <br>
-        Description: An outlook on the implementation of Industry 4.0 on the electronic industry in Indonesia. The project was supported by the Embassy of the Republic of Indonesia in Tokyo, Japan.
+        PI: Prof. Shinobu Ohya (<a href="http://www.cryst.t.u-tokyo.ac.jp/">Tanaka-Ohya Group</a>, Department of Electrical Engineering & Information Systems)</li>
+        </ul>
+      </li>
+
+      <li>
+        Apr 2019 - Sep 2019:
+          <b>Research Trainee</b>, The University of Tokyo, Japan.
+          <ul>
+        <li>Topic: Analysis of perimeter recombination on multi-junction solar cells using luminescence imaging
+        <!-- <li>Learnt: Multi-quantum wells solar cells. Taking part in: Cell characterization (EL,PL), cell fabrication (photolithography, mesa-etching) --><br>
+        PI: Prof. Sugiyama Masakazu (<a href="http://www.enesys.rcast.u-tokyo.ac.jp/index-e.html">Sugiyama Group</a>)</li>
+      </ul>
+      </li>
+      
+      <li>
+        Apr 2017 - Aug 2017:</i>
+        <b>UROP Intern</b>,
+        Institute of Industrial Science, the University of Tokyo, Tokyo, Japan.
+        <ul>
+          <li>Topic: "Measurement of AlGaAs/GaAs quantum well by photoluminescence method"<br>
+          Host: <a href="http://www.iwamoto.iis.u-tokyo.ac.jp/en/index.html">Arakawa-Iwamoto Group</a></li>
+      </ul>
       </li>
     </ul>
 
-    <h3>Honors and Awards</h3>
-    <ul style="list-style:none">
-      <li> Jun 2023:
-        <b>Special Grant for JSPS Fellows</b> (JP: 日本学術会議振興会科学研究費助成事業特別枠)
+
+    
+   <!--  <h3>Project Experiences</h3>
+    	<ul style="list-style: none">
+    	<li>
+    		Feb 2020:
+    		<b>Okinawa Institute of Science and Technology (OIST) Science Challenge</b> in Okinawa, Japan.
+    		<ul style="list-style: none">
+    		<br>Invited, but cancelled due to COVID-19.
+    		</li>
+    		</ul>
+    	</li>
+
+    	<li>
+    		Mar 2019:
+    		<b>UTokyo Hands-on Experience (Winter)</b>, École Polytechnique, Palaiseau-Paris, France.
+    		<ul style="list-style: none">
+    		<li>Engineering Design, PI: Prof. Koriyama Yukio </li>
+    		</ul>
+    	</li> 
+    	<li>
+    		Sep 2018:
+    		<b>Joint Summer Program (UTokyo, Peking University, and Tsinghua University)</b>, Beijing, P.R. China and Tokyo, Japan.
+    		<ul style="list-style: none">
+    		<li>Delegation of UTokyo for "<i>Japan and China in Global Business</i>" . 
+        <br>Final presentation: "<i>Entry strategies into a foreign market: a comparitive study between Japanese companies entry to America and Chinese company entry to Japan</i>."<br>
+    		PI: Prof. Marukawa Tomoo (The University of Tokyo)</li>
+    		</ul>
+    	</li>
+
+    <li>
+      Dec 2017
+          <b>Hult Prize UTokyo</b>,
+          <ul>
+        <li>Presentation: "<i>PowerFisher: Solar-powered engine for small-scale fisherman boat in Indonesia</i>."</li>
+      </ul>
       </li>
 
-      <li> 
-        Mar 2023:
-        <b>Excellent Master's Thesis Award</b> (JP: 優秀修士論文賞)
-        <ul style="list-style:none">
-          <!-- <li>For the thesis "Photostable ultraflexible organic photodiodes using a hybrid electron transport layer"<br> -->
-          Department of Electrical Enginering & Information Systems, The University of Tokyo</li>
-        </ul>
-      </li>
-
-      <li> 
-        Mar 2021:
-        <b>IEEJ Electrical Science Encouragement Award</b> (JP: 電気学会東京支部電気学術奨励賞)
-        <ul style="list-style:none">
-          <li>The Institute of Electrical Engineers of Japan (IEEJ), Tokyo, Japan</li>
-        </ul>
-      </li>
-
-      <li> 
-        Mar 2021:
-        <b>Dean's Award of Faculty of Engineering</b> (JP: 工学部長賞)
-        <ul style="list-style:none">
-          <li>Faculty of Engineering, The University of Tokyo, graduation year 2021</li>
-        </ul>
-      </li>
-
-      <li> 
-        Mar 2021:
-        <b>Excellent Bachelor Thesis Award</b> (JP: 優秀卒業論文賞)
-        <ul style="list-style:none">
-          <!-- <li>For the thesis "Electrical gate control of carrier type of the two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface and its field-effect-transistor operation"<br> -->
-          Department of Electrical and Electronic Engineering, The University of Tokyo, first in the graduation year 2021</li>
-        </ul>
-      </li>
-
-      <li> 
-        Mar 2017:
-        <b>Acknowledgment Speech</b> (JP: 謝辞代表).
-        <ul style="list-style:none">
-          <li>Represented pre-undergraduate student batch 2016 of Japanese Language Center, Tokyo University of Foreign Studies (TUFS).</li>
-        </ul>
-      </li>
-
-      <li> 
-        Mar 2017:
-        <b>TUFS JLC Diligence Award</b> (JP: 勤勉賞).
-        <ul style="list-style:none">
-          <li>Japanese Language Center, Tokyo University of Foreign Studies (TUFS).</li>
-        </ul>
-      </li>
-
-      <li> 
-        Sep 2014:
-        <b>Bronze Medal</b> in Indonesian Mathematical Olympiad (OSN).
-        <ul style="list-style:none">
-          <li>Advanced to Phase 1 of the National Team Training for the International Mathematical Olympiad (IMO) 2015.</li>
-        </ul>
-      </li>
-    </ul> 
-
-  <h3>Research Grants</h3>
-    <ul style="list-style:none">
-
-     <li>
-      Apr 2024 - Mar 2025:</i>
-        <b>Mizuho Foundation for the Promotion of Sciences </b>
-        <ul style="list-style:none">
-          <li>67th Engineering Research Grant
-        <br>"低次元材料を用いたバルクヘテロ構造の創製による超フレキシブル中赤外光検出システムの開拓",
-        <br>2,000,000 JPY (appx. 13,500 USD)</li>
-        </ul>
-    </li>
-
-    <li>
-      Jan 2024 - Feb 2024:
-        <b>Marubun Foundation</b>
-        <ul style="list-style:none">
-        27th International Travel Grant
-        <br>"深部組織イメージング用の二次元材料インクによる超フレキシブル赤外光検出素子の開発",
-        <br>400,000 JPY (appx. 2,700 USD)</li>
-        </ul>
-    </li>
-
-    <li>
-      Apr 2024 - Mar 2025:
-        <b>NEC C&C Foundation</b>
-        <ul style="list-style:none">
-        Grant for Researchers 2024<br>"ナノ材料科学と深層学習の融合による超フレキシブル赤外光検出システムの開拓",
-        <br>1,800,000 JPY (appx. 12,200 USD)</li>
-        </ul>
-      </li>
-
-    <li>
-      Apr 2023 - Mar 2026:
-        <b> Japan Society for the Promotion of Science (JSPS)</b> 
-        <ul style="list-style:none">
-        Grant-in-Aid for JSPS Fellows (23KJ0760)<br>"Layer-by-Layer法による近赤外光有機光検出素子の高感度化",
-        <br>4,200,000 JPY (appx. 28,600 USD)</li>
-        </ul>
-    </li>
-
-  </ul>
-
-  <h3>Fellowships & Scholarschips</h3>
-    <ul style="list-style:none">
-    <li>
-      Apr 2023 - Mar 2026:
-        <b>Japan Society for the Promotion of Science (JSPS)</b>
-        <ul style="list-style:none">
-      <li>Monthly stipend (200,000 JPY) for 3 years.</li>
-    </ul>
-    </li>
-
-    <li>
-      Apr 2021 - Mar 2023:
-        <b>Japanese Government (MEXT) Scholar</b>
-        <ul style="list-style:none">
-      <li>Monthly stipend (144,000 JPY) for 2 years, full tuition fee, and travel support.</li>
-    </ul>
-    </li>
-
-    <li>
-      Apr 2016 - Mar 2021:
-        <b>Japanese Government (MEXT) Scholar</b>
-        <ul style="list-style:none">
-      <li>Monthly stipend (120,000 JPY) for 5 years, full tuition fee, and travel support.</li>
-    </ul>
-    </li>
-
-    <li>
-      Feb 2020 - Mar 2020:
-        <b>UTokyo Go Global Scholarship</b>
-        <ul style="list-style:none">
-      <li>Travel and accommodation support (160,000 JPY) for a short-term study abroad at University of York, York, UK.</li>
-    </ul>
-    </li>
-
-    <li>
-      Mar 2019:
-        <b>UTokyo Go Global Scholarship</b>
-        <ul style="list-style:none">
-      <li>Travel and accommodation support (100,000 JPY) to participate in a scientific training at Ecole Polytechnique, Palaiseau, France.</li>
-    </ul>
-    </li>
-
-    <li>
-      Sep 2018:
-        <b>UTokyo Go Global Scholarship</b>
-        <ul style="list-style:none">
-      <li>Travel and accommodation support (80,000 JPY) to participate in a joint summer program of UTokyo, Peking University, and Tsinghua Universty in Beijing, P.R. China.</li>
-    </ul>
-    </li>
-
-    <li>
-      Aug 2017:
-        <b>JASSO Scholarship</b>
-        <ul style="list-style:none">
-      <li>Travel and accommodation support (200,000 JPY) for a visit to MIT Electronic Materials Research Group, Cambridge, USA.</li>
-    </ul>
-    </li>
-
-     <li>
-      Aug 2015 - Mar 2016:
-      <b>Bandung Institute of Technology <a href="http://www.itbuntuksemua.com/"> BIUS </a> Scholar</b>
-      <ul style="list-style:none">
-        <li>Full tuition fee for 4-year bachelor degree (resigned).</li>
-    </ul>
-    </li>
-  </ul> 
-
-
-    <h3>Preprints</h3> 
-     <!-- <ul style="list-style:none">
-      <li>[4] L. D. Anh, S. Kaneta-Takada, <u>T.J. Wijaya</u>, H. Shinya, T. Fukushima, A. Masago, H. Katayama-Yoshida, M. Tokunaga, M. Kobayashi, M. Seki, H. Tabata, M. Tanaka, & S. Ohya. 
-        <br>  "Electrical ambipolar control of high-mobility carriers at a wide-gap oxide interface." (In preparation)
+      <li>
+        Apr 2017 - Aug 2017:
+        <b>UTokyo-MIT International Symposium in Material Engineering</b>
+        <ul>
+          <li>Presentation: "<i>Japan 2050: Solar energy powered self-sufficiency vision</i>" (August 2017).<br>
+          Invited to MIT Electronic Materials Research Group (<a href="https://photonics.mit.edu/">MIT EMAT</a>) for a lab visit.<br>
+          Supervisor: Prof. Madoka Takai (UTokyo), Prof. Lionel C. Kimerling (MIT)</li>
+      </ul>
       </li>
     </ul> -->
 
-    <ul style="list-style:none">
-      <li>[2] L. D. Anh, <u>T.J. Wijaya</u>, S. Kaneta-Takada, M. Seki, H. Tabata, M. Tanaka, & S. Ohya. 
-        <br>  "All-oxide-based high-mobility planar PN junctions and tunnelling field effect transistor," 
-        <a href="https://europepmc.org/article/ppr/ppr317402"> preprint</a>, (2021). (In preparation)
+  	<h3>Positions of Responsibility</h3>
+  	<ul>
+      <li>
+        Feb 2020 -: <b> Head of Bible Research Division </b>of UTokyo Young Man Christian Association, Tokyo, Japan.
+        <br>JP: 公益財団法人東京大学学生キリスト教青年会 理事
+        <ul>
+          <li>
+            Coordinated a daily morning prayer, monthly discussion meeting on Bible passages, and annual services. Serve a minimum of 10-20 participants at every meeting.
+          </li>
+        </ul>
       </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[1] <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, H. Uchida, M. Inoue, & A. Hirohata. 
-        <br>  "Spin current generation by a surface plasmon polariton",
-        <a href="https://arxiv.org/abs/2004.12348"> preprint</a>, (2020). (In preparation)
+  		
+    	<li>
+      May 2019 - Apr 2019:
+  		<b>Chief Field Coordinator, Vice Person in Charge </b>of PPI Todai（東京大学インドネシア留学生協会）for the 92nd UTokyo May Festival（第92回五月祭常委員会）
+      	<ul>
+          <li>
+          	Coordinated more than 30 people to manage Indonesian cultural promotion activities.<br>
+          	Responsible for coordination with the committee, booth planning, HR management, and troubleshooting.<br>
+          	PPI stands for Indonesian Student Association. <a href="https://www.gogatsusai.jp/">May Festival</a> is the biggest student-led event of UTokyo.
+          </li>
+       	</ul>
       </li>
-    </ul>
 
-
-
-    <h3>Journal Publications (Co-author)</h3>
-      <ul style="list-style:none">
-
-      <li>[3] K. Sasaki, C. Okuda, <u>T.J. Wijaya</u>, S. Lee, K. Yamagishi, T. Someya, & T. Yokota.
-        <br> "Detachable Top Electrode-Organic Photodetector for Repeated Nondestructive Evaluation of Device Performance and Surface Analysis of the Active Layer,"
-        <br> <i>ACS Appl. Mater. Interfaces</i> <b>17</b>, 5, 8064
-        <a href="https://pubs.acs.org/doi/10.1021/acsami.4c15572"> In-press</a>, (2025).
-      </li>
-    </ul>
-
-
-      <ul style="list-style:none">
-      <li>[2] S. Harimurti, W. Wang, K. Sasaki, C. Okuda, <u>T.J. Wijaya</u>, M.O.G. Nayeem, S. Lee, T. Yokota, & T. Someya. 
-        <br>"Janus electrode with stable asymmetric wettability for robust biosignal monitoring on sweaty skin," 
-        <br><i>Mater. Today</i> <b>74</b>, 94 <a href="https://doi.org/10.1016/j.mattod.2024.03.009">In-press</a>, (2024).
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[1] H. Xu, H. Sodabanlu, M. W. Wilkins, A. Delamarre, <u>T.J. Wijaya</u>, K. Watanabe, Y. Nakano, & M. Sugiyama. 
-        <br> "Analysis of perimeter recombination on multijunction solar cells using luminescence imaging,"
-        <br> <i>Proc. SPIE</i>, 112750K</i>,
-        <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11275/112750K/Analysis-of-perimeter-recombination-on-multijunction-solar-cells-using-luminescence/10.1117/12.2545575.short?SSO=1"> In-press</a>, (2020).
-      </li>
-    </ul>
-
-
-    <h3>International Conference Presentations (Co-author)</h3>
-    <ul style="list-style:none">
-      <li>[7] N. Higashitarumizu, S. Wang, H.M. Kim, <u>T.J. Wijaya</u>, K. Lee, & A. Javey.  
-        <br> "Large-rea processable two-dimensional material films," 
-        <br><i>Berkeley Sensor & Actuator Center (BSAC) Fall 2024 Research Review</i>, Berkeley, CA, USA, (2024 Sep). (Poster)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[6] H. Koizumi, D. Lloyd, <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, & A. Hirohata.  
-        <br> "Spin current generation by a surface plasmon polariton,"
-        <br> <i>Intl. Conf. on Magnetism (<a href="https://www.icm2024.org/">ICM 2024</a>)</i>, Bologna, Italy, (2024 Jun). (Reviewed, oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[5] N. Higashitarumizu, H.M. Kim, <u>T.J. Wijaya</u>, S. Wang, K. Lee, & A. Javey.  
-        <br> "Large-area processable luminescent black phosphorus,"
-        <br> <i>Berkeley Sensor & Actuator Center (BSAC) Spring 2024 Research Review</i>, Berkeley, CA, USA, (2024 Mar). (Poster)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[4] D. Lloyd, <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, K. Elphick, H. Uchida, M. Inoue, & A. Hirohata.  
-        <br> "Spin current generation by a surface plasmon polariton and beyond,"
-        <br> <i>Intl. Conf. on Adv. Plasmonics, Magnetics, Magneto-optical Technol. (<a href="https://seed-nanotech.com/icapmot-2022/">ICAPMOT</a>)</i>, Online, (2022 May). (Reviewed, oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[3] L. D. Anh, S. Kaneta-Takada, <u>T.J. Wijaya</u>, H. Shinya, T. Fukushima, A. Masago, H. Katayama-Yoshida, M. Tokunaga, M. Kobayashi, M. Seki, H. Tabata, M. Tanaka, & S. Ohya.  
-        <br> "Ambipolar control of high-mobility carriers at a wide-gap oxide interface and applications towards oxide-based electronics,"
-        <br> <i>27th Intl. Workshop on Oxide Electronics</i>, Genoa, Italy, (2021 Oct). (Invited, reviewed, oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[2] L. D. Anh, <u>T.J. Wijaya</u>, S. Kaneta-Takada, M. Seki, H. Tabata, M. Tanaka, & S. Ohya.  
-        <br> "Field-effect transistor based on two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface,"
-        <br> <i>24th Intl. Conf. on Electronic Properties of Two-Dimensional Systems/20th Intl. Conf. on Modulated Semiconductor Structures (EP2DS-MSS)</i>, Toyama, Japan, (2021 Oct). (Reviewed, oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[1] K. Elphick, <u>T.J. Wijaya</u>, D. Oue, M. Matsuo, Y. Ito, H. Uchida, M. Inoue, & A. Hirohata. 
-        <br> "Spin current generation by a surface plasmon polariton,"
-        <br> <i>Insitute of Physics (IOP) Current Research in Magnetism (CRIM) 2020: High Frequency Spintronics</i>, Online, (2020 Sep). (Oral)
-      </li>
-    </ul>
-    
-
-    <h3>National Conference Presentations (First Author)</h3> 
-    <ul style="list-style:none">
-      <li>[9] <u>T.J. Wijaya</u>, S. Xiong, S. Lee, K. Fukuda, T. Yokota, & T. Someya.
-        <br> "Photostable ultraflexible organic photodiodes using a hybrid electron transport layer,"
-        <br><i>84th Japan Society of Applied Physics (JSAP) Autumn Meeting 2023</i>, Kumamoto, Japan, (2023 Sep). (Oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[8] <u>T.J. Wijaya</u>, S. Xiong, S. Lee, K. Fukuda, M. Kobayashi, T. Yokota, & T. Someya.
-        <br> "Ultraflexible photostable organic photodiodes using a hybrid electron transport layer,"
-        <br> <i>5th Flexible & Stretchable Electronics (FSE) Event</i>, Tokyo, Japan, (2023 May). (Oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[7] <u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya.
-        <br> "Revealing effects of illumination wavelength on the dark current increase of organic photodiodes with ZnO electron transport layer,"
-        <br> <i>83rd Japan Society of Applied Physics (JSAP) Autumn Meeting 2022</i>, Sendai, Japan, (2022 Sep). (Oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[6] <u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya.
-        <br> "Revealing effects of illumination wavelength on the dark current increase of organic photodiodes with ZnO electron transport layer,"
-        <br> <i>4th Flexible & Stretchable Electronics (FSE) Event</i>, Yamagata, Japan, (2022 Jul). (Oral)
-      </li>
-    </ul>
-
-
-    <ul style="list-style:none">
-      <li>[5] <u>T.J. Wijaya</u>, R. Okano, S. Lee, M. Kobayashi, T. Yokota, & T. Someya.
-        <br> "Suppression of dark current increase after illumination in ZnO-based organic photodiodes by controlling annealing conditions",
-        <br> <i>3rd Flexible & Stretchable Electronics (FSE) Event</i>, Online, (2021 Dec). (Oral)
-      </li>
-    </ul>
-    
-    <ul style="list-style:none">
-      <li>[4] <u>T.J. Wijaya</u>, M. Koizumi, S. Lee, T. Yokota, & T. Someya. 
-        <br> "Improvement of dark current stability of ZnO-based organic photodiode by control of annealing condition",
-        <br> <i>82nd Japan Society of Applied Physics (JSAP) Autumn Meeting 2021</i>, Online, (2021 Sep). (Oral)
-      </li>
-    </ul>
-     
-    <ul style="list-style:none">
-      <li>[3] <u>T.J. Wijaya</u>, L. D. Anh, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
-        <br> "Electrical control of two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface,"
-        <br> <i>68th Japan Society of Applied Physics (JSAP) Spring Meeting 2021</i>, 19a-Z14-11, Online, (2021 Mar). (Oral)
-      </li>
-    </ul>    
-
-    <ul style="list-style:none">
-      <li>[2] <u>T.J. Wijaya</u>, L. D. Anh, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
-        <br> "Gate-controlled 2-dimensional carrier transport at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface,"
-        <br> <i>12th Research Forum Cryogenic Research Center</i>, Online, (2021 Mar). (Poster)
-      </li>
-    </ul>    
-
-    <ul style="list-style:none">
-      <li>[1] <u>T.J. Wijaya</u>, L. D. Anh, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
-        <br> "Electrical control of two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface,"
-        <br> <i>12th Meeting of Ferroic-ordering and its Related Group</i>, Cont-8, Online, (2021 Jan) (Oral)
-      </li>
-    </ul>
-    
-  <h3>National Conference Presentations (Co-author)</h3> 
-
-    <ul style="list-style:none">
-      <li>[3] L. D. Anh, <u>T.J. Wijaya</u>, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
-        <br> "Field-effect transistor based on two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface",
-        <br> <i>68th Japan Society of Applied Physics (JSAP) Spring Meeting 2021</i>, 19a-Z14-10, Online, (2021 Mar) (Oral).
-      </li>
-    </ul>
-     
-    <ul style="list-style:none">
-      <li>[2] L. D. Anh, <u>T.J. Wijaya</u>, S. Kaneta-Takada, M. Tanaka, & S. Ohya. 
-        <br> "Field-effect transistor based on two-dimensional carrier gas at the FeO<sub><i>y</i></sub>/SrTiO<sub>3</sub> interface",
-        <br> <i>12th Meeting of Ferroic-ordering and its Related Group</i>, Cont-7, Online, (2021 Jan). (Oral)
-      </li>
-    </ul>
-
-    <ul style="list-style:none">
-      <li>[1] H. Xu, <u>T.J. Wijaya</u>, H. Sodabanlu, K. Watanabe, Y. Nakano, & M. Sugiyama. 
-        <br> "Analysis of perimeter recombination on multi-junction solar cells using luminescence imaging,"
-        <br> <i>80th Japan Society of Applied Physics (JSAP) Autumn Meeting</i>, 20p-B12-7, Hokkaido, Japan, (2019 Sep). (Oral)
-      </li>
-    </ul>
-
-  <h3>Experiences</h3>
-  <ul style = "list-style: none">
-  <li>
-    Apr 2024 - Present: <b>Research Assitant</b>, JST PRESTO
-  </li> 
-
-  <li>
-    Apr 2024 - Present: <b>Research Fellow</b>, NEC C&C Foundation
-  </li> 
-
-  <li>
-    Oct 2023 - Present: <b>Visiting Researcher</b>, University of California, Berkeley 
-      <ul style="list-style:none">
-        PI: Prof. Ali Javey (<a href="nano.eecs.berkeley.edu">Javey Group</a>, Department of Electrical Engineering & Computer Science)
+      <li>
+      	Aug 2018 - Aug 2019:
+      	<b>IT-Statistics Division </b>of PPI Kanto（関東地方インドネシア留学生協会）
+       	<ul>
+          <li>
+          	Conducted a survey and a visualization of the PPI branches across the Kanto region (main geographic part of Japan).<br>
+          </li>
       </ul>
-  </li> 
+      </li>
 
-  <li>
-    Oct 2023 - Present: <b>Research Affiliate</b>, Lawrence Berkeley National Lab (LBNL)
-  </li> 
-
-  <li>
-    Oct 2023 - Present: <b>Project Researcher</b>, Berkeley Sensor & Actuator Center (BSAC)
-  </li> 
-
-  <li>
-    Apr 2023 - Present: <b>Research Fellow</b>, Japan Society for the Promotion of Science (JSPS)
-      <ul style="list-style:none">
-        <li>PI: Prof. Takao Someya (<a href="www.ntech.t.u-tokyo.ac.jp/">Someya Group</a>). DC1 fellowship for young researcher. </li>
+      <li>
+      	Aug 2018 - Jun 2019:
+      	<b>Project Planning Division </b>of the 91st May Festival Standing Commitee（第91回五月祭常委員会）
+       	<ul>
+          <li>
+          	Initiated, designed, and conducted a campus tour 「歴史と偉人ツアー」 in Japanese ("History and Great Persons").<br>
+          	Also active in other managerial and field operations during the festival.
+          </li>
       </ul>
-  </li> 
+      </li>
+  	</ul>
 
-  <li>
-    Sep 2021 - Sep 2023: <b>Teaching Assistant</b>, The University of Tokyo
-      <ul style="list-style:none">
-        <li><!--Teach and guide undergraduate students to learn and fabricate organic photodetectors and thin-film transistors along with their basics physics and characterisation.-->
-          PI: Prof. Tomoyuki Yokota (<a href="www.ntech.t.u-tokyo.ac.jp/">Someya Group</a>, Department of Electrical Engineering & Information Systems)
-        </li>
-      </ul>
-  </li> 
-
-  <li>
-    Sep 2021 - Mar 2022: <b>Research Assistant</b>, The University of Tokyo
-      <ul style="list-style:none">
-        <li>PI: Prof. Takao Someya (<a href="www.ntech.t.u-tokyo.ac.jp/">Someya Group</a>, Department of Electrical Engineering & Information Systems)
-        </li>
-      </ul>
-  </li> 
-
-  <li>Feb 2020 - Mar 2020: <b>Research Associate</b>, University of York, UK.
-      <ul style="list-style:none">
-      <!-- <li>Topic: Spin current generation by surface plasmon polariton.-->
-      PI: Prof. Atsufumi Hirohata (<a href="http://www-users.york.ac.uk/~ah566/members/members.html">Spintronics Lab</a>, Departement of Electronic Engineering)</li>
-      </ul>
-  </li>
-    
-    
-  <li>Jan 2019 - Jan 2020:<b> English as a Second Language Tutor</b>
-      <ul style="list-style:none">
-        <!-- <li>Developed a customized syllabus, trained a number of elementary school students with focus on speaking by shadowing-conversation, reading, and grammar for a 1-to-2-hour weekly session.
-        </li> -->
-      </ul>
-    </li>
-    
-    <li>Apr 2018 - Apr 2019:<b> Natural Science Tutor</b>, The University of Tokyo
-      <ul style="list-style:none">
-        <li>Supervised by Globalization Office, Komaba Campus
-      </ul>
-    </li>
-  </ul>
-
-
-    <h3>Research Experiences</h3>
-    <ul style="list-style:none">
+    <h3>Volunteer Experiences</h3>
+    <ul style = "list-style: none">
     <li>
-      Aug 2019 - Oct 2019:
-      <b>Research Trainee</b>, The University of Tokyo, Japan.
-      <ul style="list-style:none">
-      <li>Topic: "Estimation of spin-to-charge conversion effeciency on Co<sub>2</sub>FeAl<sub>0.5</sub>Si<sub>0.5</sub>/<i>n</i>-Ge spin pumping experiment."
-      <br>
-      PI: Prof. Shinobu Ohya (<a href="http://www.cryst.t.u-tokyo.ac.jp/">Tanaka-Ohya Group</a>, Department of Electrical Engineering & Information Systems)</li>
-      </ul>
-    </li>
-
-    <li>
-      Apr 2019 - Sep 2019:
-        <b>Research Trainee</b>, The University of Tokyo, Japan.
-        <ul style="list-style:none">
-      <li>Topic: Analysis of perimeter recombination on multi-junction solar cells using luminescence imaging
-      <!-- <li>Learnt: Multi-quantum wells solar cells. Taking part in: Cell characterization (EL,PL), cell fabrication (photolithography, mesa-etching) --><br>
-      PI: Prof. Sugiyama Masakazu (<a href="http://www.enesys.rcast.u-tokyo.ac.jp/index-e.html">Sugiyama Group</a>)</li>
-    </ul>
-    </li>
-    
-    <li>
-      Apr 2017 - Aug 2017:</i>
-      <b>UROP Intern</b>,
-      Institute of Industrial Science, the University of Tokyo, Tokyo, Japan.
-      <ul style="list-style:none">
-        <li>Topic: "Measurement of AlGaAs/GaAs quantum well by photoluminescence method"<br>
-        Host: <a href="http://www.iwamoto.iis.u-tokyo.ac.jp/en/index.html">Arakawa-Iwamoto Group</a></li>
-    </ul>
-    </li>
-  </ul>
-
-
-  
- <!--  <h3>Project Experiences</h3>
-  	<ul style="list-style: none">
-  	<li>
-  		Feb 2020:
-  		<b>Okinawa Institute of Science and Technology (OIST) Science Challenge</b> in Okinawa, Japan.
-  		<ul style="list-style: none">
-  		<br>Invited, but cancelled due to COVID-19.
-  		</li>
-  		</ul>
-  	</li>
-
-  	<li>
-  		Mar 2019:
-  		<b>UTokyo Hands-on Experience (Winter)</b>, École Polytechnique, Palaiseau-Paris, France.
-  		<ul style="list-style: none">
-  		<li>Engineering Design, PI: Prof. Koriyama Yukio </li>
-  		</ul>
-  	</li> 
-  	<li>
-  		Sep 2018:
-  		<b>Joint Summer Program (UTokyo, Peking University, and Tsinghua University)</b>, Beijing, P.R. China and Tokyo, Japan.
-  		<ul style="list-style: none">
-  		<li>Delegation of UTokyo for "<i>Japan and China in Global Business</i>" . 
-      <br>Final presentation: "<i>Entry strategies into a foreign market: a comparitive study between Japanese companies entry to America and Chinese company entry to Japan</i>."<br>
-  		PI: Prof. Marukawa Tomoo (The University of Tokyo)</li>
-  		</ul>
-  	</li>
-
-  <li>
-    Dec 2017
-        <b>Hult Prize UTokyo</b>,
-        <ul style="list-style:none">
-      <li>Presentation: "<i>PowerFisher: Solar-powered engine for small-scale fisherman boat in Indonesia</i>."</li>
-    </ul>
-    </li>
-
-    <li>
-      Apr 2017 - Aug 2017:
-      <b>UTokyo-MIT International Symposium in Material Engineering</b>
-      <ul style="list-style:none">
-        <li>Presentation: "<i>Japan 2050: Solar energy powered self-sufficiency vision</i>" (August 2017).<br>
-        Invited to MIT Electronic Materials Research Group (<a href="https://photonics.mit.edu/">MIT EMAT</a>) for a lab visit.<br>
-        Supervisor: Prof. Madoka Takai (UTokyo), Prof. Lionel C. Kimerling (MIT)</li>
-    </ul>
-    </li>
-  </ul> -->
-
-	<h3>Positions of Responsibility</h3>
-	<ul style="list-style:none">
-    <li>
-      Feb 2020 -: <b> Head of Bible Research Division </b>of UTokyo Young Man Christian Association, Tokyo, Japan.
-      <br>JP: 公益財団法人東京大学学生キリスト教青年会 理事
-      <ul style="list-style:none">
-        <li>
-          Coordinated a daily morning prayer, monthly discussion meeting on Bible passages, and annual services. Serve a minimum of 10-20 participants at every meeting.
-        </li>
-      </ul>
-    </li>
-		
-  	<li>
-    May 2019 - Apr 2019:
-		<b>Chief Field Coordinator, Vice Person in Charge </b>of PPI Todai（東京大学インドネシア留学生協会）for the 92nd UTokyo May Festival（第92回五月祭常委員会）
-    	<ul style="list-style:none">
-        <li>
-        	Coordinated more than 30 people to manage Indonesian cultural promotion activities.<br>
-        	Responsible for coordination with the committee, booth planning, HR management, and troubleshooting.<br>
-        	PPI stands for Indonesian Student Association. <a href="https://www.gogatsusai.jp/">May Festival</a> is the biggest student-led event of UTokyo.
-        </li>
-     	</ul>
-    </li>
-
-    <li>
-    	Aug 2018 - Aug 2019:
-    	<b>IT-Statistics Division </b>of PPI Kanto（関東地方インドネシア留学生協会）
-     	<ul style="list-style:none">
-        <li>
-        	Conducted a survey and a visualization of the PPI branches across the Kanto region (main geographic part of Japan).<br>
-        </li>
-    </ul>
-    </li>
-
-    <li>
-    	Aug 2018 - Jun 2019:
-    	<b>Project Planning Division </b>of the 91st May Festival Standing Commitee（第91回五月祭常委員会）
-     	<ul style="list-style:none">
-        <li>
-        	Initiated, designed, and conducted a campus tour 「歴史と偉人ツアー」 in Japanese ("History and Great Persons").<br>
-        	Also active in other managerial and field operations during the festival.
-        </li>
-    </ul>
-    </li>
-	</ul>
-
-  <h3>Volunteer Experiences</h3>
-  <ul style = "list-style: none">
-  <li>
-    Jul 2024 -: <b>Meal Preparer</b>, St. Mary Magdalene Parish, Berkeley, USA
-      <ul style="list-style:none">
-        <li> Cook meals and deliver lunch boxes for unhoused individuals in the Berkeley neighborhood.
-        </li>
-      </ul>
-  </li> 
-
-  <li>
-    Nov 2021 - Sep 2023: <b>Meal Preparer</b>, Missionaries of Charity Brothers
-      <ul style="list-style:none">
-        <li> Cook meals and deliver lunch boxes for unhoused individuals in the Sanya neighborhood of Tokyo. Serve up to 300 meals per session.
-        </li>
-      </ul>
-  </li> 
-
-	<li>
-      Jun 2019 - Jan 2020:<b> Bible Research Division </b>of UTokyo Young Man Christian Association, Tokyo, Japan.
-      <ul style="list-style:none">
-        <li>
-          Coordinated a daily morning prayer, monthly discussion meeting on Bible passages, and annual services. 
-        </li>
-      </ul>
-    </li>
-		
-  	<li>
-      Oct 2019 - Dec 2019:<b> Study Partner for Immigrant Children</b> at CCS (世界の子どもと手をつなぐ学生の会), Meguro, Tokyo, Japan.
-      <ul style="list-style:none">
-        <li>Volunteer in teaching immigrant children, who have linguistic obstacles to learn in Japanese, for a weekly 4-hour session. Mainly dealt with Mathematics, Natural Science, and Japanese language.
-        </li>
-      </ul>
-  </ul>
-
-
-
-  <h3>Talk</h3>
-  <ul style="list-style: none">
-    <li>
-    24 Mar 2018: <b>Invited speaker</b> at Tokyo University of Foreign Studies (TUFS) JLC Workshop: "<i>Using Japanese language education tools in ICT era</i>" to share personalized Japanese language acquisition method.<br>
-    </li>
-  </ul>
-
-	<h3>Miscellaneous</h3>
-  	<ul style="list-style:none">
-  	<li>
-    	<b>Languages. </b>
-      	<i>English</i> fluent (TOEFL 109), <i>Japanese</i> proficient (JLPT N1), <i>Mandarin Chinese</i> beginner, <i>Indonesian</i> native, <i>Latin</i> elementary, <i>Japanese Sign Language</i> elementary.<br>
-    </li>
-    <li>
-    	<b>Technical skills. </b>
-      	Software: Python, C, Matlab, Igor, R, Mathematica, LaTeX, Excel, Visio, Solidworks, Adobe Photoshop, Pinnacle Studio.
-        Laboratory: Photolithography, optical devices, metal wet etching, dry etching (ion milling), sputtering, evaporator, XPS, XRD, AFM, FTIR.
-    </li>
-    <li>
-    	<b>Soft Skills. </b>
-    	Public speaking, project planning, translation and interpretation.
-    </li>
-    <li>
-   		<b>Hobbies. </b>
-   		Classic literature reading
-   	</li>
-    <li>
-      <b>Media Coverage.</b>
-      <ul style = "list-style: none">
-        <li> UmeeT．（オンライン）<a href="http://todai-umeet.com/article/36338/">http://todai-umeet.com/article/36338/</a>. 「故郷の停電を解決するため，海を越えて東大へ！インドネシア出身・テオの逆留学記」．2018年12月26日．
-        </li> 
-        <li> 東京大学新聞．第2820号．「ウィジャヤ=テオドルスさん（理Ⅰ・１年）: 母国助ける強い意志」．2017年10月24日．
-        </li>
-      </ul>
+      Jul 2024 -: <b>Meal Preparer</b>, St. Mary Magdalene Parish, Berkeley, USA
+        <ul>
+          <li> Cook meals and deliver lunch boxes for unhoused individuals in the Berkeley neighborhood.
+          </li>
+        </ul>
     </li> 
-	</ul>
 
-<Hr> 
+    <li>
+      Nov 2021 - Sep 2023: <b>Meal Preparer</b>, Missionaries of Charity Brothers
+        <ul>
+          <li> Cook meals and deliver lunch boxes for unhoused individuals in the Sanya neighborhood of Tokyo. Serve up to 300 meals per session.
+          </li>
+        </ul>
+    </li> 
 
-Updated on May 2024.
- 
+  	<li>
+        Jun 2019 - Jan 2020:<b> Bible Research Division </b>of UTokyo Young Man Christian Association, Tokyo, Japan.
+        <ul>
+          <li>
+            Coordinated a daily morning prayer, monthly discussion meeting on Bible passages, and annual services. 
+          </li>
+        </ul>
+      </li>
+  		
+    	<li>
+        Oct 2019 - Dec 2019:<b> Study Partner for Immigrant Children</b> at CCS (世界の子どもと手をつなぐ学生の会), Meguro, Tokyo, Japan.
+        <ul>
+          <li>Volunteer in teaching immigrant children, who have linguistic obstacles to learn in Japanese, for a weekly 4-hour session. Mainly dealt with Mathematics, Natural Science, and Japanese language.
+          </li>
+        </ul>
+    </ul>
+
+
+
+    <h3>Talk</h3>
+    <ul style="list-style: none">
+      <li>
+      24 Mar 2018: <b>Invited speaker</b> at Tokyo University of Foreign Studies (TUFS) JLC Workshop: "<i>Using Japanese language education tools in ICT era</i>" to share personalized Japanese language acquisition method.<br>
+      </li>
+    </ul>
+
+  	<h3>Miscellaneous</h3>
+    	<ul>
+    	<li>
+      	<b>Languages. </b>
+        	<i>English</i> fluent (TOEFL 109), <i>Japanese</i> proficient (JLPT N1), <i>Mandarin Chinese</i> beginner, <i>Indonesian</i> native, <i>Latin</i> elementary, <i>Japanese Sign Language</i> elementary.<br>
+      </li>
+      <li>
+      	<b>Technical skills. </b>
+        	Software: Python, C, Matlab, Igor, R, Mathematica, LaTeX, Excel, Visio, Solidworks, Adobe Photoshop, Pinnacle Studio.
+          Laboratory: Photolithography, optical devices, metal wet etching, dry etching (ion milling), sputtering, evaporator, XPS, XRD, AFM, FTIR.
+      </li>
+      <li>
+      	<b>Soft Skills. </b>
+      	Public speaking, project planning, translation and interpretation.
+      </li>
+      <li>
+     		<b>Hobbies. </b>
+     		Classic literature reading
+     	</li>
+      <li>
+        <b>Media Coverage.</b>
+        <ul style = "list-style: none">
+          <li> UmeeT．（オンライン）<a href="http://todai-umeet.com/article/36338/">http://todai-umeet.com/article/36338/</a>. 「故郷の停電を解決するため，海を越えて東大へ！インドネシア出身・テオの逆留学記」．2018年12月26日．
+          </li> 
+          <li> 東京大学新聞．第2820号．「ウィジャヤ=テオドルスさん（理Ⅰ・１年）: 母国助ける強い意志」．2017年10月24日．
+          </li>
+        </ul>
+      </li> 
+  	</ul>
+
+  <Hr> 
+
+  Updated on May 2024.
+   
 </body>
 <!-- >>>>>>> 2adb2f096e76e2ab18d07e081cc5f79cd1f17eac -->
 </html>
