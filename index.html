@@ -118,6 +118,31 @@
         margin-bottom: 12px;
       }
 
+      .toc-bar {
+        margin: 20px 0;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.6;
+      }
+
+      .toc-bar a {
+        text-decoration: none;
+        color: #0056b3;
+        padding: 0 6px;
+      }
+
+      .toc-bar a:hover {
+        text-decoration: underline;
+      }
+
+      a {
+        color: #0056b3;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
 
     </style>
   </head>
@@ -134,10 +159,24 @@
   <body>
     <h1>Theodorus Jonathan WIJAYA</h1>
     <div class="contact">
-      <b>Email:</b> <a href="mailto:theodorusjw30@g.ecc.u-tokyo.ac.jp">theodorusjw30@g.ecc.u-tokyo.ac.jp</a>
+      1600 Edith St., Berkeley, CA, USA
+      Email: <a href="mailto:theodorusjw30@g.ecc.u-tokyo.ac.jp">theodorusjw30@g.ecc.u-tokyo.ac.jp</a>
     </div>
 
-      <h3>Education & Training</h3><div class="entry">
+    <div class="toc-bar">
+      <a href="#education">Education</a> |
+      <a href="#publications">Journal Publications (First Author)</a> |
+      <a href="#grants">Grants</a> |
+      <a href="#awards">Awards</a> |
+      <a href="#publications">Journal Publications (Co-author)</a> |
+      <a href="#references">References</a> |
+      <a href="#intlconf">Conference Presentations</a> |
+      <!-- <a href="#natconf">National Conference Presentations</a> | -->
+      <a href="#volunteer">Volunteer Experience</a> |
+      <a href="#misc">Personal Profile</a>
+    </div>
+
+      <h3 id="education">Education & Training</h3><div class="entry">
       <div class="position">Visiting Researcher</div>
       <div class="details">
         <div class="institution">University of California, Berkeley</div>
@@ -178,34 +217,7 @@
       </div>
     </div>
 
-    <h3>References</h3> 
-
-    <div class="references-grid">
-      <div>
-        <b>Prof. Takao Someya</b><br>
-        The University of Tokyo<br>
-        +81-3-5841-0411<br>
-        <a href="mailto:someya@g.ecc.u-tokyo.ac.jp">someya@g.ecc.u-tokyo.ac.jp</a>
-      </div>
-      <div>
-        <b>Prof. Ali Javey</b><br>
-
-        University of California, Berkeley<br>
-        +1-510-643-7263<br>
-        <a href="mailto:ajavey@berkeley.edu">ajavey@berkeley.edu</a>
-      </div>
-      <div>
-        <b>Prof. Tomoyuki Yokota</b><br>
-        The University of Tokyo<br>
-        +81-3-5841-6709<br>
-        <a href="mailto:yokota@ntech.t.u-tokyo.ac.jp">yokota@ntech.t.u-tokyo.ac.jp</a>
-      </div>
-    </div>
-
-
-    </ul>
-
-      <h3>Journal Publications (First Author)</h3>
+      <h3 id="publications">Journal Publications (First Author)</h3>
       <ol class="reversed-list" reversed>
         <li>
           <u>T.J. Wijaya</u>, N. Higashitarumizu, S. Wang, S. Tajima, H.M. Kim, S. Wang, D. Zhang, J. Bullock, T. Yokota, T. Someya, & A. Javey.
@@ -229,7 +241,7 @@
       </ol>
 
 
-      <h3>Research Grants (As Principal Investigator)</h3>
+      <h3 id="grants">Research Grants (As Principal Investigator)</h3>
     
       <ul class="date-description-list">
 
@@ -289,7 +301,7 @@
       </ul>
       
 
-      <h3>Awards &amp; Fellowships</h3>
+      <h3 id="awards">Awards &amp; Fellowships</h3>
       <ul class="date-description-list">
         <li>
           <span class="date">2023 - 2026</span>
@@ -467,7 +479,7 @@
       </li>
     </ul> -->
 
-      <h3>Journal Publications (Co-author)</h3>
+      <h3 id="coauthor">Journal Publications (Co-author)</h3>
       <ol class="reversed-list" reversed>
         <li>
           K. Sasaki, C. Okuda, <u>T.J. Wijaya</u>, S. Lee, K. Yamagishi, T. Someya, & T. Yokota.
@@ -488,7 +500,32 @@
         </li>
       </ol>
 
-      <h3>Book Chapters</h3>
+
+      <h3 id="references">References</h3> 
+
+      <div class="references-grid">
+        <div>
+          <b>Prof. Takao Someya</b><br>
+          The University of Tokyo<br>
+          +81-3-5841-0411<br>
+          <a href="mailto:someya@g.ecc.u-tokyo.ac.jp">someya@g.ecc.u-tokyo.ac.jp</a>
+        </div>
+        <div>
+          <b>Prof. Ali Javey</b><br>
+
+          University of California, Berkeley<br>
+          +1-510-643-7263<br>
+          <a href="mailto:ajavey@berkeley.edu">ajavey@berkeley.edu</a>
+        </div>
+        <div>
+          <b>Prof. Tomoyuki Yokota</b><br>
+          The University of Tokyo<br>
+          +81-3-5841-6709<br>
+          <a href="mailto:yokota@ntech.t.u-tokyo.ac.jp">yokota@ntech.t.u-tokyo.ac.jp</a>
+        </div>
+      </div>
+
+      <h3 id="book">Book Chapters</h3>
 
       <ol class="reversed-list" reversed>
         <li><u>T.J. Wijaya</u>. 
@@ -499,7 +536,7 @@
       </ol>
 
 
-      <h3>Preprints</h3> 
+      <h3 id="preprints">Preprints</h3> 
       <ol class="reversed-list" reversed>
        <!-- <ul>
         <li>[4] L. D. Anh, S. Kaneta-Takada, <u>T.J. Wijaya</u>, H. Shinya, T. Fukushima, A. Masago, H. Katayama-Yoshida, M. Tokunaga, M. Kobayashi, M. Seki, H. Tabata, M. Tanaka, & S. Ohya. 
@@ -520,7 +557,7 @@
       
       </ol>
 
-      <h3>International Conference Presentations (First Author)</h3>
+      <h3 id="intlconf">International Conference Presentations (First Author)</h3>
       <ol class="reversed-list" reversed>
           <li><u>T.J. Wijaya</u>, N. Higashitarumizu, H.M. Kim, S. Wang, D. Zhang, & A. Javey. 
             <br>"Mechanically flexible mid-wave infrared imagers using black phosphorus ink films,”<br>
@@ -626,7 +663,7 @@
       </ul> -->
       
 
-      <h3>National Conference Presentations (First Author)</h3> 
+      <h3 id="natconf">National Conference Presentations (First Author)</h3> 
       <ol class="reversed-list" reversed>
         <li><u>T.J. Wijaya</u>, S. Xiong, S. Lee, K. Fukuda, T. Yokota, & T. Someya.
           <br> "Photostable ultraflexible organic photodiodes using a hybrid electron transport layer,"
@@ -888,7 +925,7 @@
       </li>
   	</ul> -->
 
-    <h3>Volunteer Experiences</h3>
+    <h3 id="volunteer">Volunteer Experiences</h3>
       <ul class="date-description-list">
 
         <li>
@@ -934,7 +971,7 @@
       </li>
     </ul> -->
 
-  	<h3>Personal Profile</h3>
+  	<h3 id="misc">Personal Profile</h3>
     <ul style="list-style: none; padding-left: 0;">
       <li><b>Languages:</b> English (fluent), Japanese (proficient), Indonesian (native), <br>Mandarin Chinese (elementary), Latin (elementary), Japanese Sign Language (elementary)</li>
 
