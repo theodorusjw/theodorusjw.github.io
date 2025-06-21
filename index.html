@@ -7,26 +7,25 @@
     <style>
       body {
         font-family: Calibri, sans-serif;
-        font-size: 18px;
-        line-height: 1.4;
+        font-size: 20px;               /* Increased for readability */
+        line-height: 1.6;              /* Slightly more generous */
         margin: 40px auto;
-        max-width: 800px;
-        padding: 0 20px;
+        max-width: 960px;              /* Increased width but still within optimal reading width */
+        padding: 0 30px;               /* Slightly more breathing room on sides */
         color: #000;
       }
 
-      h3 {
-        font-size: 20px;
+      h2 {
+        font-size: 24px;
         font-weight: bold;
-        margin-top: 40px; /* Increase spacing above each h3 header */
-        margin-bottom: 16px; /* Adjust spacing below if needed */
+        margin-bottom: 24px;
       }
 
-
-      h2 {
+      h3 {
         font-size: 22px;
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-top: 48px;
+        margin-bottom: 18px;
       }
 
       .entry {
@@ -87,16 +86,17 @@
         display: flex;
         gap: 12px;
         margin-bottom: 8px; /* Tight vertical spacing */
-        font-size: 18px;
+        font-size: 20px;
       }
 
       .date-description-list > li > .date {
-        width: 100px;       /* Fixed narrow column for date */
+        width: 150px;       /* Fixed narrow column for date */
         font-weight: normal;
         font-style: regular;
         white-space: nowrap;
         flex-shrink: 0;
         color: #444;
+        box-sizing: border-box;
       }
 
       .date-description-list > li > .desc {
@@ -110,7 +110,7 @@
         margin-bottom: 30px;
       }
       .references-grid div {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 1.4;
       }
 
@@ -119,8 +119,8 @@
       }
 
       .toc-bar {
-        margin: 20px 0;
-        font-size: 16px;
+        margin: 28px 0;
+        font-size: 20px;
         text-align: center;
         line-height: 1.6;
       }
@@ -174,9 +174,9 @@
 
     <div class="toc-bar">
       <a href="#education">Education</a> |
+      <a href="#grants">Research Grants</a> |
+      <a href="#awards">Awards & Fellowships</a> |
       <a href="#publications">Journal Publications (First Author)</a> |
-      <a href="#grants">Grants</a> |
-      <a href="#awards">Awards</a> |
       <a href="#publications">Journal Publications (Co-author)</a> |
       <a href="#references">References</a> |
       <a href="#intlconf">Conference Presentations</a> |
@@ -225,30 +225,6 @@
         <div class="subline italic">Dean’s Award (First in the Department)</div>
       </div>
     </div>
-
-      <h3 id="publications">Journal Publications (First Author)</h3>
-      <ol class="reversed-list" reversed>
-        <li>
-          <u>T.J. Wijaya</u>, N. Higashitarumizu, S. Wang, S. Tajima, H.M. Kim, S. Wang, D. Zhang, J. Bullock, T. Yokota, T. Someya, & A. Javey.
-          <br>"Mechanically flexible mid-wave infrared imagers using black phosphorus ink films," 
-          <br>Accepted in <i>Nat. Commun.</i>, (2025).
-        </li>
-
-        <li>
-          <u>T.J. Wijaya</u>, S. Xiong, K. Sasaki, Y. Kato, K. Mori, M. Koizumi, S. Lee, M. Kobayashi, Y. Zhou, K. Fukuda, T. Yokota, & T. Someya.
-          <br>"A Highly Stable Organic-Inorganic Hybrid Electron Transport Layer for Ultraflexible Organic Photodiodes," 
-          <br><i>Adv. Mater.</i> <b>37</b>, 2501951, 
-          <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202501951">In-press</a>, (2025).
-        </li>
-
-        <li>
-          <u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya. 
-          <br>"Photostability improvement of organic photodiodes with ZnO electron transport layer," 
-          <br><i>Adv. Photonics Res.</i> <b>4</b>, 2200355, 
-          <a href="https://doi.org/10.1002/adpr.202200355">In-press</a>, (2023).
-        </li>
-      </ol>
-
 
       <h3 id="grants">Research Grants (As Principal Investigator)</h3>
     
@@ -373,6 +349,31 @@
             The University of Tokyo, Excellent Undergraduate Thesis Award
           </span>
         </li>
+
+
+      <h3 id="publications">Journal Publications (First Author)</h3>
+      <ol class="reversed-list" reversed>
+        <li>
+          <u>T.J. Wijaya</u>, N. Higashitarumizu, S. Wang, S. Tajima, H.M. Kim, S. Wang, D. Zhang, J. Bullock, T. Yokota, T. Someya, & A. Javey.
+          <br>"Mechanically flexible mid-wave infrared imagers using black phosphorus ink films," 
+          <br>Accepted in <i>Nat. Commun.</i>, (2025).
+        </li>
+
+        <li>
+          <u>T.J. Wijaya</u>, S. Xiong, K. Sasaki, Y. Kato, K. Mori, M. Koizumi, S. Lee, M. Kobayashi, Y. Zhou, K. Fukuda, T. Yokota, & T. Someya.
+          <br>"A Highly Stable Organic-Inorganic Hybrid Electron Transport Layer for Ultraflexible Organic Photodiodes," 
+          <br><i>Adv. Mater.</i> <b>37</b>, 2501951, 
+          <a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202501951">In-press</a>, (2025).
+        </li>
+
+        <li>
+          <u>T.J. Wijaya</u>, T. Yokota, S. Lee, R. Okano, M. Kobayashi, & T. Someya. 
+          <br>"Photostability improvement of organic photodiodes with ZnO electron transport layer," 
+          <br><i>Adv. Photonics Res.</i> <b>4</b>, 2200355, 
+          <a href="https://doi.org/10.1002/adpr.202200355">In-press</a>, (2023).
+        </li>
+      </ol>
+
 
 <!--         <li>
           <span class="date">2017</span>
@@ -993,8 +994,8 @@
  -->
       <!-- <li><b>Soft Skills:</b> Public speaking, project planning, translation and interpretation</li> -->
 
-      <li><b>Other formation:</b> Philosophy (Ancient, Medieval), Theology (Franciscan, Jesuit)</li>
-
+      <li><b>Formation:</b> Theology (Franciscan, Jesuit), Philosophy (Ancient Greek, Medieval), Literature (Dostoevsky, Tolkien)</li>
+      
       <li><b>Media Coverage:</b>
         <ul style="list-style: none; padding-left: 20px;">
           <li>UmeeT: 故郷の停電を解決するため，海を越えて東大へ！<a href="http://todai-umeet.com/article/36338/">In-press</a>, Dec 2018.</li>
